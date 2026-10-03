@@ -14,3 +14,4 @@
 - Use the shared storefront provider for account panel state alongside locale and cart state so ecommerce controls remain consistent across routes.
 - All product imagery comes from the supplied pack photos via `packImage()` — never generate new packaging artwork for the storefront.
 - Cart items carry their selected size (CartItem = product + size); product cards and the detail page pass the active size into `add()`.
+- Serve production storefront media from `/public/media` and provide MP4/WebM video fallbacks so assets remain host-independent.

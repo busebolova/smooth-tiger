@@ -4,12 +4,12 @@ import hero from "../assets/hero-tiger-real-logo.png";
 import tea from "../assets/tea-collection.jpg";
 import coffee from "../assets/coffee-collection.jpg";
 import story from "../assets/story-cinema.jpg";
-import heroVideo from "../assets/hero-tiger-real-logo.mp4.asset.json";
+
 import { products } from "../data/products";
 import { ProductCard } from "../components/product-card";
 import { useStore } from "../components/storefront";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/")({ staticData: { sitemap: true },
   head: () => ({ meta: [
     { title: "Smooth Tiger — Tea, Coffee & Rituals" },
     { name: "description", content: "Rare teas, expressive coffees and objects for a smoother ritual." },
@@ -29,7 +29,7 @@ function HomePage() {
     line: "A ceremony of rare leaves and thoughtfully roasted beans.", scroll: "Scroll to brew", tea: "The Tea Ritual", teaBody: "From award-winning yellow tea to ceremonial matcha.", coffee: "The Roastery", coffeeBody: "Expressive origins, balanced roasts.", explore: "Explore", selected: "Selected Brews", all: "View all", story: "Our Story", storyTitle: "A name, a childhood moment, and a tiger that is always smooth.", storyBody: "A four-year-old boy watched a wrestling show in awe as his mother handed him a mug of lukewarm tea. When the show ended, she asked: What would your name be if you were a wrestler?", storyQuote: "Smooth. Smooth Tiger.", read: "Read the story"
   };
   return <main>
-    <section className="hero"><video poster={hero} autoPlay muted loop playsInline aria-label="A tiger sipping steaming tea in turquoise light"><source src={heroVideo.url} type="video/mp4" /></video><div className="hero-wash" /><div className="hero-title"><p>Brews & Accessories · İstanbul</p><h1><span className="title-smooth">Smooth</span><br/><span className="title-tiger">Tiger</span></h1><p className="hero-line">{copy.line}</p></div><div className="scroll-mark"><i /><span>{copy.scroll}</span></div></section>
+    <section className="hero"><video poster="/media/hero-poster.jpg" autoPlay muted loop playsInline preload="metadata" aria-label="A tiger sipping steaming tea in turquoise light"><source src="/media/hero-mobile.webm" type="video/webm" media="(max-width: 800px)" /><source src="/media/hero-mobile.mp4" type="video/mp4" media="(max-width: 800px)" /><source src="/media/hero.webm" type="video/webm" /><source src="/media/hero.mp4" type="video/mp4" /></video><div className="hero-wash" /><div className="hero-title"><p>Brews & Accessories · İstanbul</p><h1><span className="title-smooth">Smooth</span><br/><span className="title-tiger">Tiger</span></h1><p className="hero-line">{copy.line}</p></div><div className="scroll-mark"><i /><span>{copy.scroll}</span></div></section>
     <div className="claw-divider"><i/><i/><i/></div>
     <section className="collections">
       <Link to="/tea" className="collection"><div className="collection-image"><img src={tea} loading="lazy" width={1200} height={1504} alt="Turquoise tea still life" /></div><div className="collection-copy"><div><small>01 · Tea</small><h2>{copy.tea}</h2><p>{copy.teaBody}</p></div><span>{copy.explore}<ArrowRight /></span></div></Link>

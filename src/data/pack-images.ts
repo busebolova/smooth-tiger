@@ -1,11 +1,14 @@
 import type { Locale } from "./products";
 
-const files = import.meta.glob<{ url: string }>("../assets/packs/*.asset.json", { eager: true, import: "default" });
+// Pack photos are served from /public/media/packs so they work on any host (Lovable, Vercel).
+const files = import.meta.glob("../assets/packs/*.asset.json", { eager: true });
 
 const packs: Record<string, string> = {};
-for (const [path, asset] of Object.entries(files)) {
-  const key = path.split("/").pop()!.replace(".png.asset.json", "");
-  packs[key] = asset.url;
+for (const path of Object.keys(files)) {
+  const filename = path.split("/").pop();
+  if (!filename) continue;
+  const key = filename.replace(/\.(?:png|jpe?g|webp)\.asset\.json$/i, "");
+  packs[key] = `/media/packs/${key}.webp`;
 }
 
 /** Returns the supplied package photo for a product size and language, falling back to any available size. */

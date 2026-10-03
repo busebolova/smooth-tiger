@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CoffeeRouteImport } from './routes/coffee'
 import { Route as JournalRouteImport } from './routes/journal'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TeaRouteImport } from './routes/tea'
 import { Route as ProductIdRouteImport } from './routes/product.$id'
 
@@ -36,6 +37,11 @@ const JournalRoute = JournalRouteImport.update({
   path: '/journal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TeaRoute = TeaRouteImport.update({
   id: '/tea',
   path: '/tea',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/coffee': typeof CoffeeRoute
   '/journal': typeof JournalRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tea': typeof TeaRoute
   '/product/$id': typeof ProductIdRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/coffee': typeof CoffeeRoute
   '/journal': typeof JournalRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tea': typeof TeaRoute
   '/product/$id': typeof ProductIdRoute
 }
@@ -69,20 +77,36 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/coffee': typeof CoffeeRoute
   '/journal': typeof JournalRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tea': typeof TeaRoute
   '/product/$id': typeof ProductIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/coffee' | '/journal' | '/tea' | '/product/$id'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/coffee'
+    | '/journal'
+    | '/sitemap.xml'
+    | '/tea'
+    | '/product/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/coffee' | '/journal' | '/tea' | '/product/$id'
+  to:
+    | '/'
+    | '/about'
+    | '/coffee'
+    | '/journal'
+    | '/sitemap.xml'
+    | '/tea'
+    | '/product/$id'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/coffee'
     | '/journal'
+    | '/sitemap.xml'
     | '/tea'
     | '/product/$id'
   fileRoutesById: FileRoutesById
@@ -92,6 +116,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CoffeeRoute: typeof CoffeeRoute
   JournalRoute: typeof JournalRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TeaRoute: typeof TeaRoute
   ProductIdRoute: typeof ProductIdRoute
 }
@@ -126,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JournalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tea': {
       id: '/tea'
       path: '/tea'
@@ -148,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CoffeeRoute: CoffeeRoute,
   JournalRoute: JournalRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TeaRoute: TeaRoute,
   ProductIdRoute: ProductIdRoute,
 }

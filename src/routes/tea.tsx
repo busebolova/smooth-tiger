@@ -6,7 +6,7 @@ import lifeBalmy from "../assets/lifestyle-balmy.jpg";
 import { products } from "../data/products";
 import { ProductCard } from "../components/product-card";
 import { useStore } from "../components/storefront";
-export const Route = createFileRoute("/tea")({ head: () => ({ meta: [{ title: "Tea Collection — Smooth Tiger" }, { name: "description", content: "Explore Smooth Tiger's award-winning yellow, green, white and herbal teas." }, { property: "og:title", content: "Tea Collection — Smooth Tiger" }, { property: "og:description", content: "Rare leaves, bold blends and ceremonial matcha." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }, { property: "og:url", content: "/tea" }], links: [{ rel: "canonical", href: "/tea" }] }), component: TeaPage });
+export const Route = createFileRoute("/tea")({ staticData: { sitemap: true }, head: () => ({ meta: [{ title: "Tea Collection — Smooth Tiger" }, { name: "description", content: "Explore Smooth Tiger's award-winning yellow, green, white and herbal teas." }, { property: "og:title", content: "Tea Collection — Smooth Tiger" }, { property: "og:description", content: "Rare leaves, bold blends and ceremonial matcha." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }, { property: "og:url", content: "/tea" }], links: [{ rel: "canonical", href: "/tea" }] }), component: TeaPage });
 const teaScenes = [
   { img: lifeTurk, tr: "Türk Çayı — günün ilk demlenişi", en: "Türk Çayı — the day's first brew" },
   { img: lifeMatcha, tr: "Matcha — sakin, odaklı, seremonik", en: "Matcha — calm, focused, ceremonial" },

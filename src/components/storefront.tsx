@@ -1,8 +1,8 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { BookOpen, Coffee, Home, Leaf, ShoppingBag, UserRound, X } from "lucide-react";
 import { createContext, useContext, useEffect, useMemo, useState, type FormEvent, type ReactNode } from "react";
-import logoLight from "../assets/ST-light.png.asset.json";
-import logoDark from "../assets/ST-dark.png.asset.json";
+const logoLight = { url: "/media/ST-light.png" };
+const logoDark = { url: "/media/ST-dark.png" };
 import { Button } from "./button";
 import type { Locale, Product } from "../data/products";
 import { formatPrice } from "../data/products";

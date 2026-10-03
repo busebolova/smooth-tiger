@@ -30,3 +30,4 @@
 
 - [ ] Kullanıcı "New Project – Vercel" ile GitHub repo içe aktarmaya çalıştı: "repository does not contain the requested branch or commit reference. Please ensure the repository is not empty." — hatayı açıkla ve çözüm öner.
 - [x] Mobilde çay ve kahve sayfalarındaki yazılar/başlıklar ortalı (catalog-hero, product-card, lifestyle figcaption).
+- [x] Canlı yayında logo görünürlüğünü artır; hero ve hikâye videolarına MP4/WebM uyumluluğu ekle.

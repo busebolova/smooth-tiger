@@ -6,7 +6,7 @@ import { packImage } from "../data/pack-images";
 import { Button } from "../components/button";
 import { useStore } from "../components/storefront";
 
-export const Route = createFileRoute("/product/$id")({
+export const Route = createFileRoute("/product/$id")({ staticData: { sitemap: true },
   loader: ({ params }) => {
     const product = products.find((p) => p.id === params.id);
     if (!product) throw notFound();

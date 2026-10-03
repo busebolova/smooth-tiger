@@ -13,7 +13,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans);overflow-x:hidden}
 a{color:inherit;text-decoration:none} button,input{font:inherit} ::selection{background:var(--primary);color:var(--primary-foreground)}
 .site-header{position:fixed;z-index:95;top:0;left:0;width:100%;height:84px;display:flex;align-items:center;gap:2rem;padding:0 3rem;color:var(--background);mix-blend-mode:difference}
-.brand-mark{order:-1;flex:0 0 auto;width:96px;height:60px;display:flex;align-items:center}
+.brand-mark{order:-1;flex:0 0 auto;width:132px;height:64px;display:flex;align-items:center}
 .brand-mark img{display:block;width:100%;height:100%;object-fit:contain}
 .nav-links{margin-left:auto;display:flex;gap:1.6rem;align-items:center;font-size:.65rem;text-transform:uppercase;letter-spacing:.16em;white-space:nowrap}
 .nav-links a{opacity:.7}.nav-links a:hover,.nav-links .active{opacity:1;color:var(--primary)}
@@ -21,7 +21,7 @@ a{color:inherit;text-decoration:none} button,input{font:inherit} ::selection{bac
 .button{border:0;cursor:pointer;text-transform:uppercase;letter-spacing:.13em;font-size:.7rem;min-height:44px;padding:0 1.25rem;background:transparent;color:inherit}
 .button-solid{background:var(--primary);color:var(--primary-foreground)}.button-outline{border:1px solid currentColor}.button-icon{width:44px;padding:0;display:grid;place-items:center}.button-icon svg{width:18px}.cart-button{position:relative}.cart-button span{position:absolute;top:1px;right:0;background:var(--primary);color:var(--primary-foreground);border-radius:50%;width:18px;height:18px;display:grid;place-items:center;font-size:9px}
 .hero{height:100svh;min-height:680px;position:relative;display:grid;place-items:center;color:var(--background);overflow:hidden}
-.hero>video,.story-teaser>img,.about-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero>video{transform:scale(1.03)}
+.hero>video,.story-teaser>img,.about-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero>video{transform:scale(1.03);background:var(--foreground) url('/media/hero-poster.jpg') center/cover no-repeat}
 .hero-wash{position:absolute;inset:0;background:linear-gradient(to bottom,oklch(0.1 0 0/.42),oklch(0.1 0 0/.02) 48%,oklch(0.1 0 0/.62))}
 .hero-title{position:relative;text-align:center}.hero-title>p{font-size:.65rem;text-transform:uppercase;letter-spacing:.25em}.hero-title h1{font:600 clamp(4.5rem,12vw,10rem)/.78 var(--font-display);text-transform:uppercase;margin:1.5rem 0;letter-spacing:0}.hero-title h1 span{display:inline-block}.title-tiger{color:var(--primary);text-shadow:0 0 32px var(--motion-glow)}.hero-line{max-width:38ch;margin:auto;line-height:1.65}.scroll-mark{position:absolute;bottom:2rem;display:grid;place-items:center;gap:.6rem;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase}.scroll-mark i{width:1px;height:45px;background:color-mix(in oklab,var(--background) 40%,transparent)}
 .claw-transition{position:fixed;z-index:80;inset:0;pointer-events:none;overflow:hidden;visibility:hidden}.claw-transition i{position:absolute;top:-35%;left:-25%;width:150%;height:58%;background:var(--motion-ink);box-shadow:0 0 60px var(--motion-glow);transform:rotate(-10deg)}.claw-transition i:nth-child(2){top:21%;background:var(--primary)}.claw-transition i:nth-child(3){top:76%}
@@ -94,14 +94,14 @@ a{color:inherit;text-decoration:none} button,input{font:inherit} ::selection{bac
 }
 /* Band header + mobile bottom nav (overrides) */
 .site-header.band-header{mix-blend-mode:normal;background:var(--foreground);color:var(--background);height:68px;border-bottom:1px solid color-mix(in oklab,var(--primary) 40%,transparent)}
-.band-header .brand-mark{order:0;width:84px;height:48px;margin:0}
+.band-header .brand-mark{order:0;width:116px;height:58px;margin:0}
 .band-header .nav-links{order:1;margin-left:auto;position:static;transform:none;background:none;padding:0;flex-direction:row}
 .band-header .locale{order:2}.band-header .header-actions{order:3}
 .claw-transition{display:none!important}
 .bottom-nav{display:none}
 @media(max-width:800px){
 .site-header.band-header{height:60px;padding:0 1rem}
-.band-header .brand-mark{width:70px;height:40px}
+.band-header .brand-mark{width:92px;height:48px}
 .band-header .nav-links{display:none}
 @media(max-width:800px){.band-header .header-actions{display:flex}.band-header .header-actions .button-icon{width:40px}}
 .band-header .locale{margin-left:auto}
