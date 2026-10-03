@@ -1,0 +1,32 @@
+# Smooth Tiger build
+- [x] Establish the film-editorial design system and shared navigation
+- [x] Build cinematic bilingual homepage and minimal cart interaction
+- [x] Build Tea, Coffee, About, and Journal pages
+- [x] Add supplied logo assets and generated cinematic imagery
+- [x] Verify desktop and mobile flows
+- [x] Mobile: add Hakkımızda to bottom nav; cart as top-band icon
+- [x] Mobile hero: stop cramped/clipped titles; scroll marker above bottom nav; tuck tiger line
+- [x] Cart drawer: quantity controls (+/−), line totals, item count
+- [x] Checkout button: show "API bekleniyor" waiting state
+- [x] Fix the hero/header overlap and preserve first-viewport readability
+- [x] Add sign-in and registration entry points with an ecommerce account panel
+- [x] Fix overlapping header elements
+- [x] Show supplied tea/coffee package photos per size and language
+- [x] Add consistent coffee lifestyle scenes
+- [x] Tint pack art backgrounds in turquoise tones
+- [x] Retint pack art backgrounds to pastel blue tones (same family across cards)
+- [ ] Lighten pack art backgrounds to near-white baby blue (user follow-up)
+- [ ] Add tea lifestyle scenes (Türk Çayı, Matcha, Balmy) from pack images
+- [x] Redesign header as one clean solid band
+- [x] Mobile: app-style bottom navigation bar; remove slide-in menu
+- [x] Remove disliked page (tiger-claw) transitions
+- [x] Build product detail page (/product/$id) reusing existing pack imagery only
+- [x] Fix footer logo rendering and empty "Taze paketleme" trust cell
+- [ ] Regenerate tea lifestyle scenes with real Smooth Tiger pack images (edit_image)
+- [x] Generate new hero video: tiger drinking tea with rising steam, turquoise/apricot tones; wire into hero
+- [x] Equalize product grid alignment (remove 3n+2 vertical stagger)
+- [x] Our Story: fix stacked text layout
+- [x] Footer: logo + empty space next to fresh packing
+
+- [ ] Kullanıcı "New Project – Vercel" ile GitHub repo içe aktarmaya çalıştı: "repository does not contain the requested branch or commit reference. Please ensure the repository is not empty." — hatayı açıkla ve çözüm öner.
+- [x] Mobilde çay ve kahve sayfalarındaki yazılar/başlıklar ortalı (catalog-hero, product-card, lifestyle figcaption).
